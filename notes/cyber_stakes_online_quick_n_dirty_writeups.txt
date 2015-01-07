@@ -1,0 +1,74 @@
+hexeditm 
+    flag in file text
+objdumpme 
+    objdump -d objdumpme
+readasm
+    to_decimal(0x2c) + 4 // from push
+ebg13
+    caesar
+asmtosie
+    int testb(int a) { return a + /* given number */; }
+crashme1
+    give it 65 alphanumberic chars
+client side auth
+    check out src, just go to the document location with the key
+cbc
+    http://aes.online-domain-tools.com/
+xorro
+    0) convert hex string to actual hex
+    1) git clone https://github.com/hellman/xortool.git
+    2) install xortool
+    3) use xortool to guess the key
+        keep in mind that 20 == ord(' ') is the most frequent character in text
+        // 00 is the most frequent in binary
+euroflix
+    visit the url from a european proxy
+crackme_-1
+    in main, check out the atoi call and the cmp. Answer is the cmp value in decimal
+asmtosie1
+    int testb(int d, int a){ int c = d; c -= a; a = c; a += 306442989; return a; }
+cooking
+    login as guest -> change cookie admin value to 1
+cooking 2
+    same thing, but the cookie is b64 encoded
+sequels are the worst
+    'OR 1=1;--
+injection 1
+    `cat key`
+arparparp
+    Arp spoofing is going on. The real stream is "eth.addr eq 54:be:f7:51:9b:03 and eth.addr eq 54:be:f7:51:9b:00". Read the data in the UDP data of each frame.
+elf
+    e_machine needs to be fixed from 0x4141 to 0x0300
+filesurgery
+    1) dl scalpel
+    2) found that the filesys has a bmp with strings
+    3) tried to scalpel bmp unsuccessfully
+    4) found bmp in filesys with http://en.wikipedia.org/wiki/BMP_file_format#Example_1
+    5) noticed that scalpel has the wrong sig for bmp. It doesn't allow for certain sized bmp's.
+    6) fixed bmp sig to: bmp     y       100000  BM???\x00\x00\x00
+    7) ran scalpel and found the bmp
+    8) the bmp was a bit corrupted, but I could still glean the key from it.
+bytecode
+    used uncompyle2 to decompile the bytecode, because strings produced a mangled string of the password
+core1
+    gdb core1.bin core1
+    x/10s $ecx
+bytecode2
+    uncompyle2 --> modded decompiled code to not check for a password
+two time pad
+    github exscape/BMP --> xor bmp's together
+php1
+    http://shell.cyberstakesonline.com:50381/index.php?luck[]=
+cooking3
+    Modded the given source code to encrypt with a given IV. Then encrypted the two cookies: the guest one and the guest one modded to have admin=1. (Make sure to pass it in as a json.dump) Found the bit the changed between them, and modded that bit in the actual cookie.
+php2
+    1) get tamper data and run it
+    2) click a link in the given website to start a post request
+    3) modify the post parameter to "secret.flag%00text1.txt"
+php3
+    Get cookies manager+
+    Add a new cookie val num := 9d9
+inoderite
+    debugfs inoderite.img
+    cat key
+    literally the first five words of the gibberish that follows "the first five words of"
