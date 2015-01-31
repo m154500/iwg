@@ -1,0 +1,1 @@
+0,10,20,30,40,50 * * * *   /home/cganas/work/ForAllSecure/live-challenges-2015/forensics/unreal/target/Unreal3.2.10.4/ircdcron/ircdchk >/dev/null 2>&1

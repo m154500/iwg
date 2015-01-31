@@ -1,0 +1,10 @@
+prefix=/home/cganas/work/ForAllSecure/live-challenges-2015/forensics/unreal/target/Unreal3.2.10.4/extras/regexp
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: TRE
+Description: TRE regexp matching library
+Version: 0.8.0
+Libs: -L${libdir} -ltre   
+Cflags: -I${includedir} 
