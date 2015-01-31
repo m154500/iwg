@@ -1,0 +1,29 @@
+#!/usr/bin/python
+
+import argparse
+import getpass
+import os
+
+if getpass.getuser() != 'matrix2':
+  print 'Careful! This script should be ran only as matrix2'
+  print 'Try "sudo -u matrix2 <cmd>" instead'
+  exit(1)
+
+cwd = os.path.dirname(os.path.realpath(__file__))
+os.chdir(cwd)
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-start', help='Start matrix2 (and kill existing instances)', action='store_true')
+parser.add_argument('-stop', help='Stop matrix2', action='store_true')
+args = parser.parse_args()
+
+def kill_gunicorn():
+  os.system('killall -9 gunicorn')
+
+if args.start:
+  kill_gunicorn()
+  os.system('gunicorn -b 0.0.0.0:8007 web_server:app -w 3 -D')
+elif args.stop:
+  kill_gunicorn()
+else:
+  print 'Unknown args, try -h for help.'

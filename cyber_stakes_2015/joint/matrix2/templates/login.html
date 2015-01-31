@@ -1,0 +1,15 @@
+{% extends "def.html" %}
+{% block body %}
+  {% if session.logged_in %}
+    <p>Already logged in...</p>
+  {% else %}
+  <div id="vcent">
+    <form action=/login method=post>
+      <input type=text name=username value="user"><br><br>
+      <input type=password name=password><br><br>
+      <input type=submit name=login value=Login>&nbsp;&nbsp;&nbsp;
+      <input type=submit name=register value=Register>
+    </form>
+  </div>
+  {% endif %}
+{% endblock %}

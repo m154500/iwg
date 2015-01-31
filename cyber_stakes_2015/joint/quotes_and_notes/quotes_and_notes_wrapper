@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ -z "$1" ]; then
+    echo "Requires a working directory"
+    exit
+fi
+
+cd $1
+exec ./quotes_and_notes_service

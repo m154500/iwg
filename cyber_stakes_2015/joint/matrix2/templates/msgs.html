@@ -1,0 +1,17 @@
+{% extends "def.html" %}
+{% block body %}
+  <div id="msgs" >
+  <ul class="msg">
+    {% for msg in msgs %}
+      <li class="new">{{msg.user}} says <code>{{msg.msg}}</code></li>
+    {% endfor %}
+  </ul>
+  </div>
+  <div id="smsg">
+    <form action=/message method=post>
+      <input type=text name=user size=4 value=user>
+      <input type=text name=msg size=40 value=message><br>
+      <input type=submit value=Send>
+    </form>
+  </div>
+{% endblock %}
